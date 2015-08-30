@@ -22,10 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2973251">
+            <state vertical-scroll-proportion="-11.115385">
               <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
@@ -44,11 +44,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="README.MD" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.MD">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1918" column="23" selection-start-line="1918" selection-start-column="23" selection-end-line="1918" selection-end-column="23" />
+              <caret line="1226" column="20" selection-start-line="1226" selection-start-column="20" selection-end-line="1226" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -98,6 +121,8 @@
         <option value="$PROJECT_DIR$/contact.html" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.MD" />
       </list>
     </option>
   </component>
@@ -399,12 +424,12 @@
       <option name="number" value="Default" />
       <updated>1440908026286</updated>
       <workItem from="1440908027579" duration="3660000" />
-      <workItem from="1440912534398" duration="8476000" />
+      <workItem from="1440912534398" duration="8698000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12136000" />
+    <option name="totallyTimeSpent" value="12358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1118" extended-state="0" />
@@ -549,17 +574,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1918" column="23" selection-start-line="1918" selection-start-column="23" selection-end-line="1918" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2973251">
+        <state vertical-scroll-proportion="-11.115385">
           <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
@@ -574,6 +591,33 @@
             <element signature="n#div#7;n#div#0;n#body#0;n#!!top" expanded="false" />
             <element signature="n#div#8;n#div#0;n#body#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1226" column="20" selection-start-line="1226" selection-start-column="20" selection-end-line="1226" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.MD">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
