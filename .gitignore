@@ -1,4 +1,13 @@
 # Created by .ignore support plugin (hsz.mobi)
+### jspm
+jspm_packages
+
+### jspm
+node_modules
+
+### build
+dist
+
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
 
@@ -48,3 +57,6 @@ crashlytics.properties
 crashlytics-build.properties
 
 
+
+jspm_packages
+dist
