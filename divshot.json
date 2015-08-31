@@ -2,5 +2,8 @@
   "name": "thekazes",
   "root": "./",
   "clean_urls": true,
-  "error_page": "error.html"
+  "cache_control": {},
+  "routes": {
+      "**": "index.html"
+  }
 }
