@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "jspm bundle ./js/react/routes/core.js ./dist/bundle.js --inject",
+    "build": "jspm bundle ./js/react/routes/core.js + ./js/react/routes/index.js + ./js/react/routes/contact.js ./dist/bundle.js --inject --minify",
     "clean": "jspm unbundle"
   },
   "repository": {
