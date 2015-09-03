@@ -8,7 +8,7 @@ class Accommodations extends React.Component {
           <h2>ACCOMMODATIONS</h2>
           <span className="subtitle">PECHANGA RESORT, CALIFORNIA</span>
 
-          <p> For your convenience, a block of rooms have been reserved at Pechanga Resort & Casino.
+          <p> For your convenience, a block of rooms have been reserved at Pechanga Resort &amp; Casino.
               For our special rate, please call <strong>Hotel Reservations</strong> at 888-732-4264 and provide
               the following information:
             <br /><strong>Group Name:</strong> LAM DELA WEDDING <br /><strong>Booking Code:</strong> SLA1215
