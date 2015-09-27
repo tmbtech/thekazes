@@ -1,9 +1,11 @@
 import React from "react";
 import Firebase from "firebase";
+import Admin from "../components/admin";
+import Login from "../components/login"
 
-class Admin extends React.Component {
+class AdminRoute extends React.Component {
   state = {
-    isAuthorized: false
+    isAuthorized: true
   }
 
   componentWillMount() {
@@ -15,51 +17,22 @@ class Admin extends React.Component {
     this.firebaseRef.off();
   }
 
-  onClick = (e) => {
-    e.preventDefault();
-    const username = React.findDOMNode(this.refs.username).value;
-    const password = React.findDOMNode(this.refs.password).value;
-
-    this.firebaseRef.authWithPassword({
-      email: username,
-      password: password
-    }, error => {
-      if (error) {
-        console.log("Login Failed!", error);
-      } else {
-        this.setState({isAuthorized: true});
-      }
-    }, {
-      remember: "sessionOnly"
-    });
+  onLoggedIn = (user) => {
+    this.setState({isAuthorized: true});
+    console.log(user);
   }
 
   render() {
     const {isAuthorized} = this.state;
-    if (!isAuthorized) {
-      return (
-        <form>
-          <p>
-            Username: &nbsp;
-            <input type="text" ref="username" />
-          </p>
 
-          <p>
-            Password:&nbsp;
-            <input type="password" ref="password" />
-          </p>
-
-          <p>
-            <button onClick={this.onClick}>click</button>
-          </p>
-        </form>
-      );
-    }
+    const Component = isAuthorized ? <Admin /> : <Login action={this.onLoggedIn} />;
 
     return (
-      <div>check it</div>
+      <span>
+        {Component}
+      </span>
     );
   }
 }
 
-React.render(<Admin />, document.getElementById("react_admin"));
+React.render(<AdminRoute />, document.getElementById("react_admin"));
