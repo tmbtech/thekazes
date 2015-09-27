@@ -62,10 +62,10 @@ export default class Instaface extends React.Component {
         </a>
 
         {showDelete ? (
-          <div>
-            <button onClick={this.onDelete(image.key)}>delete</button>
+          <div style={{backgroundColor: "#b5af47", cursor:"pointer"}} onClick={this.onDelete(image.key)}>
+            <p style={{color:"white", textAlign:"center"}}>HIDE</p>
           </div>
-        ) : null}
+        ): null}
 
       </div>
     );

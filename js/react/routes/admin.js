@@ -5,7 +5,7 @@ import Login from "../components/login"
 
 class AdminRoute extends React.Component {
   state = {
-    isAuthorized: true
+    isAuthorized: false
   }
 
   componentWillMount() {
@@ -18,14 +18,16 @@ class AdminRoute extends React.Component {
   }
 
   onLoggedIn = (user) => {
-    this.setState({isAuthorized: true});
-    console.log(user);
+    this.setState({
+      user,
+      isAuthorized: true
+    });
   }
 
   render() {
     const {isAuthorized} = this.state;
 
-    const Component = isAuthorized ? <Admin /> : <Login action={this.onLoggedIn} />;
+    const Component = isAuthorized ? <Admin {...this.state} /> : <Login action={this.onLoggedIn} />;
 
     return (
       <span>
