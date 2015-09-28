@@ -5,6 +5,11 @@ export default class Login extends React.Component {
   componentWillMount() {
     this.firebaseRef = new Firebase("https://popping-fire-6215.firebaseio.com");
 
+    const user = this.firebaseRef.getAuth();
+    if (user) {
+      const {action} = this.props;
+      action(user);
+    }
   }
 
   componentWillUnmount() {
@@ -27,8 +32,6 @@ export default class Login extends React.Component {
         const {action} = this.props;
         action(user);
       }
-    }, {
-      remember: "sessionOnly"
     });
   }
 
@@ -49,7 +52,7 @@ export default class Login extends React.Component {
                 <input type="password" className="form_input required" ref="password" />
               </div>
               <div className="form_row_full">
-                <input type="submit" className="form_submit_contact" value="Enter" onClick={this.onClick}/>
+                <input type="submit" className="form_submit_contact" value="Enter" onClick={this.onClick} />
               </div>
             </form>
           </div>

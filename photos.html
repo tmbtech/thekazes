@@ -14,6 +14,7 @@
         System.import('js/react/routes/core.js');
         System.import('js/react/routes/instaface.js');
     </script>
+
 </head>
 <body>
 <div id="main_container">
@@ -29,7 +30,8 @@
                 <h1>Capture it! Share It! We'll love it!</h1>
 
                 <p>
-                    Help us build everlasting memories by sending a MMS to 949-565-KAZE (2937). <br />
+                    Help us build everlasting memories by sending a MMS to 949-565-KAZE (2937), <br />
+                    or tag us on IG #thekazes<br />
                     Your pictures will automatically upload to our website. :)
                 </p>
             </div>
@@ -43,7 +45,12 @@
             <div class="clear"></div>
         </div>
     </div>
-
+    <div class="page_content">
+        <div class="full_width_centered">
+            <div><h3>#thekazes</h3></div>
+            <div id="instafeed" style="display: flex; flex-wrap:wrap"></div>
+        </div>
+    </div>
     <div class="home_bottom">
         <div class="full_width_centered">
             <div class="left13">
@@ -70,4 +77,24 @@
 
 </div>
 </body>
+<script src="js/instafeed.js"></script>
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'thekazes',
+        clientId: 'd4a02c0f303b48a3831afa4b1ecf4fa2',
+        sortBy: 'most-recent',
+        links: true,
+        limit: 60,
+        resolution: "low_resolution",
+        template: '' +
+        '<div style="border: 1px solid #eee; width: 320px; height:auto; margin: 15px;">' +
+        '<a class="animation" href="{{link}}">' +
+        '<img src="{{image}}" />' +
+        '</a>' +
+        '<p style="padding:10px">{{caption}}</p>' +
+        '</div>'
+    });
+    feed.run();
+</script>
 </html>
