@@ -11,7 +11,6 @@ class Menu extends React.Component {
       <ul id="main_menu">
         <li><a className={classNames({selected:pageName==="index"})} href="index.html">HOME</a></li>
         <li><a className={classNames({selected:pageName==="shareit"})} href="photos.html">SHARE WITH US</a></li>
-        <li><a className={classNames({selected:pageName==="contact"})} href="contact.html">GET IN TOUCH</a></li>
       </ul>
     );
   }
