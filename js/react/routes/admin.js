@@ -1,6 +1,6 @@
 import React from "react";
 import Firebase from "firebase";
-import Admin from "../components/admin";
+import Instaface from "../components/instaface/instaface_admin.js";
 import Login from "../components/login"
 
 class AdminRoute extends React.Component {
@@ -20,14 +20,14 @@ class AdminRoute extends React.Component {
   onLoggedIn = (user) => {
     this.setState({
       user,
-      isAuthorized: true
+      isAuthenticated: true
     });
   }
 
   render() {
-    const {isAuthorized} = this.state;
+    const {isAuthenticated} = this.state;
 
-    const Component = isAuthorized ? <Admin {...this.state} /> : <Login action={this.onLoggedIn} />;
+    const Component = isAuthenticated ? <Instaface {...this.state} /> : <Login action={this.onLoggedIn} />;
 
     return (
       <span>

@@ -1,10 +1,10 @@
 import React from "react";
 import Firebase from "firebase";
-import InstaFace from "../components/instaface";
+import Instaface from "../components/instaface/instaface";
 
 class PhotoGallery extends React.Component {
   render() {
-    return <InstaFace isAuthenticated={false} />;
+    return <Instaface />;
   }
 }
 

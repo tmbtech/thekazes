@@ -38,48 +38,57 @@ export default class Instaface extends React.Component {
   }
 
   childChanged = (child) => {
-    const images = this.state.images.filter(image => {
-      return image.timestamp !== child.val().timestamp
+    const {timestamp, isVisible} = child.val();
+    const images = this.state.images.map(image => {
+      if (image.timestamp === timestamp) {
+        image.isVisible = isVisible;
+      }
+
+      return image;
     });
 
     this.setState({images});
   }
 
-  onDelete = key => (e) => {
+  onClick = (key, isVisible) => (e) => {
     e.preventDefault();
     const path = this.firebaseRef.child(key);
-    path.update({isVisible: false});
+    path.update({isVisible: !isVisible});
   }
 
   renderImages = (image, i) => {
-    const className = (i+1) % 4 === 0 ? "left14_last" : "left14";
-    const showDelete = this.props.isAuthenticated;
+    const className = (i + 1) % 4 === 0 ? "left14_last" : "left14";
+    const {timestamp, isVisible, key, raw, disabled} = image;
+    let {thumb} = image;
+
+    if (isVisible === false && disabled)
+      thumb = disabled;
 
     return (
-      <div className={`${className} ${image.key}`} key={image.key}>
-        <a href={image.raw} key={image.timestamp}>
-          <img src={image.thumb} />
+      <div className={`${className} ${key}`} key={key}>
+        <a href={raw} key={timestamp}>
+          <img src={thumb} />
         </a>
 
-        {showDelete ? (
-          <div style={{backgroundColor: "#b5af47", cursor:"pointer"}} onClick={this.onDelete(image.key)}>
-            <p style={{color:"white", textAlign:"center"}}>HIDE</p>
-          </div>
-        ): null}
+        <div style={{backgroundColor: "#b5af47", cursor:"pointer"}} onClick={this.onClick(key, isVisible)}>
+          <p style={{color:"white", textAlign:"center"}}>
+            {isVisible === false ? "SHOW" : "HIDE"}
+          </p>
+        </div>
 
       </div>
     );
   }
 
   render() {
-    const {images} = this.state;
+    let {images} = this.state;
     if (!images.length) {
       return null;
     }
 
     return (
       <div>
-        {images.filter(image => image.isVisible !== false ).map(this.renderImages)}
+        {images.map(this.renderImages)}
       </div>
     );
   }
