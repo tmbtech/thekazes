@@ -38,9 +38,10 @@ export default class Instaface extends React.Component {
   }
 
   childChanged = (child) => {
-    const {timestamp, isVisible} = child.val();
+    const key = child.key();
+    const {isVisible} = child.val();
     const images = this.state.images.map(image => {
-      if (image.timestamp === timestamp) {
+      if (image.key === key) {
         image.isVisible = isVisible;
       }
 

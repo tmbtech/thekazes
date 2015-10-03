@@ -47,7 +47,7 @@ export default class Instaface extends React.Component {
     }
 
     const filteredSet = images.filter(image => {
-      return image.timestamp !== child.val().timestamp
+      return image.key !== child.key()
     });
 
     this.setState({images: filteredSet});
